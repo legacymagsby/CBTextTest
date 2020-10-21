@@ -32,7 +32,7 @@ steps:
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
-
+- task: CBTStopTunnel@0
 - script: |
     python test_selenium.py
   displayName: 'Test'
