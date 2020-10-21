@@ -25,7 +25,10 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
-
+- task: CBTMain@0
+  inputs:
+    connectedServiceName: 'CBT4'
+    cbtTunnel: true
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
@@ -34,3 +37,4 @@ steps:
 - script: |
     python test_selenium.py
   displayName: 'Test'
+- task: CBTStopTunnel@0
