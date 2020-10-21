@@ -1,4 +1,5 @@
 # Python package
+
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
@@ -26,8 +27,7 @@ steps:
   displayName: 'Use Python $(python.version)'
 - task: CBTMain@0
   inputs:
-    connectedServiceName: 'CBT2'
-    cbtTunnel: true
+    connectedServiceName: 'CBT3'
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
