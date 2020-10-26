@@ -27,7 +27,7 @@ steps:
   displayName: 'Use Python $(python.version)'
 - task: CBTMain@0
   inputs:
-    connectedServiceName: 'CBT5'
+    connectedServiceName: 'CBT6'
     cbtTunnel: true
 - script: |
     python -m pip install --upgrade pip
@@ -37,4 +37,3 @@ steps:
 - script: |
     python test_selenium.py
   displayName: 'Test'
-- task: CBTStopTunnel@0
