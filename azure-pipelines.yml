@@ -27,7 +27,8 @@ steps:
   displayName: 'Use Python $(python.version)'
 - task: CBTMain@0
   inputs:
-    connectedServiceName: 'CBT1'
+    connectedServiceName: 'CBT2'
+    cbtTunnel: true
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
