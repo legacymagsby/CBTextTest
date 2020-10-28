@@ -33,3 +33,4 @@ steps:
 - script: |
     python test_selenium.py
   displayName: 'Test'
+- task: CBTStopTunnel@0
