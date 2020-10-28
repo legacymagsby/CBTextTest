@@ -9,6 +9,7 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+
 strategy:
   matrix:
     Python27:
@@ -25,6 +26,9 @@ steps:
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
+- task: CmdLine@2
+  inputs:
+    script: 'sudo npm i -g netlify-cli'
 - task: CBTMain@0
   inputs:
     connectedServiceName: 'jgjhlwrhmj'
