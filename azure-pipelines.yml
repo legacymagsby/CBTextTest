@@ -21,10 +21,7 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- task: CBTMain@0
-  inputs:
-    connectedServiceName: 'sjonsf'
-    cbtTunnel: true
+
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
