@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-import os
+import os, time
 
 username = os.getenv("CBT_USERNAME")
 access_key = os.getenv("CBT_AUTHKEY")
@@ -18,11 +18,13 @@ driver = webdriver.Remote(
 
 
 
-driver.get("http://www.google.com")
-if not "Google" in driver.title:
-    raise Exception("Unable to load google page!")
-elem = driver.find_element_by_name("q")
-elem.send_keys("CrossBrowserTesting")
-elem.submit()
+# driver.get("http://www.google.com")
+# if not "Google" in driver.title:
+#     raise Exception("Unable to load google page!")
+# elem = driver.find_element_by_name("q")
+# elem.send_keys("CrossBrowserTesting")
+# elem.submit()
+driver.get("http://192.168.0.3:3000/")
+time.sleep(10)
 print(driver.title)
 driver.quit()
