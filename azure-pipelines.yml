@@ -23,9 +23,8 @@ steps:
 
 - task: CBTMain@0
   inputs:
-    connectedServiceName: 'lkljektb'
+    connectedServiceName: 'lkjkhgjfgkhl'
     cbtTunnel: true
-    cbtTunnelOptions: '--bypass false --acceptAllCerts'
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
