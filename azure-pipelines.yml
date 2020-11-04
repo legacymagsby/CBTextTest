@@ -23,8 +23,7 @@ steps:
 
 - task: CBTMain@0
   inputs:
-    connectedServiceName: 'dzsfgdhjg'
-    cbtTunnel: true
+    connectedServiceName: 'CBT'
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
@@ -33,4 +32,3 @@ steps:
 - script: |
     python test_selenium.py
   displayName: 'Test'
-- task: CBTStopTunnel@0
